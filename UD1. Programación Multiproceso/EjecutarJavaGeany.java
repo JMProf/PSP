@@ -19,9 +19,9 @@ public class EjecutarJavaGeany {
         Process p = pb.start();
 
         // Comprobamos el valor de salida del subproceso (0 es código correcto)
-            int exitVal;
-            exitVal =  p.waitFor();
-            System.out.println("Valor de salida: " + exitVal);
+        int exitVal;
+        exitVal =  p.waitFor();
+        System.out.println("Valor de salida: " + exitVal);
         } catch (Exception e) {
             e.printStackTrace();
         }
