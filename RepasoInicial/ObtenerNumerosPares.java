@@ -1,3 +1,8 @@
+/**
+ * Crear una clase que implemente método público con todos los números pares comprendidos entre un min y un max.
+ * Deberéis declarar min y max como atributos privados.
+ */
+
 import java.util.Scanner;
 
 class NumerosPares{
