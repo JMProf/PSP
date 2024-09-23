@@ -18,12 +18,10 @@ public class EjecutarJavaGeany {
         //Se ejecuta el proceso
         Process p = pb.start();
 
-        //obtener la salida devuelta por el proceso
-            InputStream is = p.getInputStream();
-            int c;
-            while ((c = is.read()) != -1)
-                System.out.print((char) c);
-            is.close();
+        // Comprobamos el valor de salida del subproceso (0 es código correcto)
+            int exitVal;
+            exitVal =  p.waitFor();
+            System.out.println("Valor de salida: " + exitVal);
         } catch (Exception e) {
             e.printStackTrace();
         }
