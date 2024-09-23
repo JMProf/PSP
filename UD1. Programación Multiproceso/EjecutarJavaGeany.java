@@ -6,7 +6,7 @@ import java.io.*;
 public class EjecutarJavaGeany {
     public static void main(String[] args) {
         //Creamos objeto File al directorio donde está AbrirGeany
-        File directorio = new File("/home/user/Documentos/IntelliJ/PSP/UD1/AbrirGeany/out/production/AbrirGeany");
+        File directorio = new File("/home/jm/Documentos/IntelliJ/PSP/UD1/AbrirGeany/out/production/AbrirGeany");
         //El proceso a ejecutar es AbrirGeany
         try{
         ProcessBuilder pb = new ProcessBuilder("java", "AbrirGeany");
