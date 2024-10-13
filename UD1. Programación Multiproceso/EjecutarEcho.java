@@ -9,7 +9,7 @@ public class EjecutarEcho {
         Scanner sc = new Scanner(System.in); // Scanner para escribir desde teclado
 
         // Preparamos subproceso Echo
-        File directorio = new File("/home/jm/Escritorio"); // Modificar con la ubicación del subproceso
+        File directorio = new File("/home/user"); // Modificar con la ubicación del subproceso
         ProcessBuilder pb = new ProcessBuilder("java", "Echo");
         pb.directory(directorio);
 
