@@ -7,7 +7,7 @@ class HiloSimple extends Thread {
     }
 }
 
-public class UsaHilo {
+public class UsaHilo1 {
     public static void main(String[] args){
         HiloSimple hs = new HiloSimple();
         hs.start();
