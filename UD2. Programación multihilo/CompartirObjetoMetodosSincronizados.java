@@ -1,6 +1,6 @@
-class Contador {
+class Contador3 {
     private int c = 0; //Atributo contador
-    Contador(int c) {
+    Contador3(int c) {
         this.c = c;
     }
 
@@ -18,11 +18,11 @@ class Contador {
 
 }// CONTADOR
 
-class HiloA extends Thread {
-    private Contador contador;
+class HiloA3 extends Thread {
+    private Contador3 contador;
 
     //Asignamos un nombre al hilo y un valor para el contador
-    public HiloA(String n, Contador c) {
+    public HiloA3(String n, Contador3 c) {
         setName(n);
         contador = c;
     }
@@ -36,11 +36,11 @@ class HiloA extends Thread {
     }
 }// FIN HILOA
 
-class HiloB extends Thread {
-    private Contador contador;
+class HiloB3 extends Thread {
+    private Contador3 contador;
 
     //Asignamos un nombre al hilo y un valor para el contador
-    public HiloB(String n, Contador c) {
+    public HiloB3(String n, Contador3 c) {
         setName(n);
         contador = c;
     }
@@ -56,12 +56,12 @@ class HiloB extends Thread {
 
 public class CompartirObjetoMetodosSincronizados {
     public static void main(String[] args) {
-        Contador cont = new Contador(100); //El contador comenzará en 100
-        HiloA a = new HiloA("HiloA", cont);//El hilo A suma 300 al contador
-        HiloB b = new HiloB("HiloB", cont);//El hilo B resta 300 al contador
+        Contador3 cont = new Contador3(100); //El contador comenzará en 100
+        HiloA3 a = new HiloA3("HiloA", cont);//El hilo A suma 300 al contador
+        HiloB3 b = new HiloB3("HiloB", cont);//El hilo B resta 300 al contador
         a.start();
         b.start();
-        
+
         //Espero a que finalicen las hebras
         try{
             a.join();
