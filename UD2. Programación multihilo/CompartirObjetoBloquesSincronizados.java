@@ -1,6 +1,6 @@
-class Contador {
+class Contador2 {
     private int c = 0; //Atributo contador
-    Contador(int c) {
+    Contador2(int c) {
         this.c = c;
     }
 
@@ -18,18 +18,18 @@ class Contador {
 
 }// CONTADOR
 
-class HiloA extends Thread {
-    private Contador contador;
+class HiloA2 extends Thread {
+    private Contador2 contador;
 
     //Asignamos un nombre al hilo y un valor para el contador
-    public HiloA(String n, Contador c) {
+    public HiloA2(String n, Contador2 c) {
         setName(n);
         contador = c;
     }
 
     //Incrementa el valor del contador en 300
     public void run() {
-        
+
         //Se sincroniza el objeto contador
         synchronized(contador){
             for (int j = 0; j < 300; j++) {
@@ -40,18 +40,18 @@ class HiloA extends Thread {
     }
 }// FIN HILOA
 
-class HiloB extends Thread {
-    private Contador contador;
+class HiloB2 extends Thread {
+    private Contador2 contador;
 
     //Asignamos un nombre al hilo y un valor para el contador
-    public HiloB(String n, Contador c) {
+    public HiloB2(String n, Contador2 c) {
         setName(n);
         contador = c;
     }
 
     //Decrementa el valor del contador en 300
     public void run() {
-        
+
         //Se sincroniza el objeto contador
         synchronized(contador){
             for (int j = 0; j < 300; j++) {
@@ -64,12 +64,12 @@ class HiloB extends Thread {
 
 public class CompartirObjetoBloquesSincronizados {
     public static void main(String[] args) {
-        Contador cont = new Contador(100); //El contador comenzará en 100
-        HiloA a = new HiloA("HiloA", cont);//El hilo A suma 300 al contador
-        HiloB b = new HiloB("HiloB", cont);//El hilo B resta 300 al contador
+        Contador2 cont = new Contador2(100); //El contador comenzará en 100
+        HiloA2 a = new HiloA2("HiloA", cont);//El hilo A suma 300 al contador
+        HiloB2 b = new HiloB2("HiloB", cont);//El hilo B resta 300 al contador
         a.start();
         b.start();
-        
+
         //Espero a que finalicen las hebras
         try{
             a.join();
