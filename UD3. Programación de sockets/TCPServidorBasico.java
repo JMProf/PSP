@@ -7,7 +7,7 @@ public class TCPServidorBasico {
         ServerSocket Servidor = new ServerSocket(Puerto);
 
         System.out.println("Escuchando en " + Servidor.getLocalPort());	
-        Socket cliente= Servidor.accept();//esperando a un cliente 
+        Socket cliente = Servidor.accept();//esperando a un cliente 
 
         //realizar acciones con cliente
       
