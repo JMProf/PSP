@@ -11,14 +11,14 @@ public class TCPObjetoServidor {
         // Se prepara un flujo de salida para objetos
         ObjectOutputStream outObjeto = new ObjectOutputStream(cliente.getOutputStream());
         // Se prepara un objeto y se envía
-        Persona per1 = new Persona("Juan", 20);
+        Persona per1 = new Persona("Mónica", 28);
         outObjeto.writeObject(per1); //enviando objeto
-        System.out.println("Envio: " + per1.getNombre() +"*"+ per1.getEdad());
+        System.out.println("Envio: " + per1.getNombre() +" "+ per1.getEdad());
 
         // Se obtiene un stream para leer objetos
         ObjectInputStream inObjeto = new ObjectInputStream(cliente.getInputStream());
         Persona per2 = (Persona) inObjeto.readObject();
-        System.out.println("Recibo: "+per2.getNombre()+"*"+per2.getEdad());
+        System.out.println("Recibo: "+per2.getNombre()+" "+per2.getEdad());
 
         // CERRAR STREAMS Y SOCKETS
         outObjeto.close();
