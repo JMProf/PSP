@@ -4,6 +4,7 @@ import javax.swing.*;
  * Esta clase implementa la interfaz gráfica de un cliente de chat grupal.
  * El cliente se conecta a un servidor de chat y puede enviar y recibir mensajes
  * de otros clientes conectados al servidor.
+ *
  * @author
  */
 public class ClienteChat extends JFrame implements Runnable {
